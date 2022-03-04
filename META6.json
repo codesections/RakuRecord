@@ -1,0 +1,26 @@
+{
+  "auth" : "zef:codesections",
+  "authors" : [
+    "Daniel Sockwell"
+  ],
+  "build-depends" : [ ],
+  "depends" : [ ],
+  "description" : "A minimalist record type",
+  "license" : "Artistic-2.0",
+  "name" : "Record",
+  "perl" : "6.d",
+  "provides" : {
+      "Record": "lib/Record.rakumod"
+  },
+  "resources" : [ ],
+  "source-url" : "https://github.com/codesections/RakuRecord.git",
+  "support" : {
+    "email" : "daniel@codesections.com"
+  },
+  "tags" : [
+    "type",
+    "record"
+  ],
+  "test-depends" : [ ],
+  "version" : "0.0.1"
+}

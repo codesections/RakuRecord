@@ -1,0 +1,18 @@
+use Record;
+use Test;
+
+plan 3;
+
+record User {
+    has Str $.name;
+    has Real $.age = 42;
+}
+
+my $basic = User(:name<Tom>);
+is $basic.name, 'Tom', "Provided value exists";
+
+is-deeply $basic.age, 42, "Defaults work";
+
+my $too-many = User(:name<Tom>:email("Tom@example.com"));
+
+is $too-many.raku, User(:name<Tom>).raku, "Extra values ignored";
