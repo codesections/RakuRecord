@@ -1,7 +1,8 @@
+use lib <lib>;
 use Record;
 use Test;
 
-plan 3;
+plan 4;
 
 record User {
     has Str $.name;
@@ -16,3 +17,5 @@ is-deeply $basic.age, 42, "Defaults work";
 my $too-many = User(:name<Tom>:email("Tom@example.com"));
 
 is $too-many.raku, User(:name<Tom>).raku, "Extra values ignored";
+
+lives-ok { User.raku }, "Undefined records can be printed";
